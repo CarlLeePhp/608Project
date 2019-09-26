@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Running", true);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.Space) && grounded) {
             rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
             anim.SetTrigger("Jump");
         }
